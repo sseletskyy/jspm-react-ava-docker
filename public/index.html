@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="jspm_packages/system.js"></script>
+  <script src="jspm.config.js"></script>
+  <script>
+    var readyForMainLoad
+    if (location.origin.match(/localhost/)) {
+      readyForMainLoad = System.import('systemjs-hot-reloader').then(function (connect) {
+        connect({ host: '//localhost:9080' })
+      })
+    }
+    Promise.resolve(readyForMainLoad).then(function () {
+      System.import('app')
+    })
+  </script>
+</body>
+</html>
