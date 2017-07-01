@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <title>App</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--<link href="//cdn.muicss.com/mui-0.9.16/css/mui.min.css" rel="stylesheet" type="text/css" media="screen" />-->
+  <link href="src/vendor/mui.min.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="app"></div>
+<script src="jspm_packages/system.js"></script>
+<script src="jspm.config.js"></script>
+<!--<script src="https://cdn.polyfill.io/v1/polyfill.min.js?features=Intl.~locale.en"></script>-->
+<script>
+  var readyForMainLoad
+  if (location.origin.match(/localhost/)) {
+    readyForMainLoad = System.import('systemjs-hot-reloader').then(function (connect) {
+        connect({ host: '//localhost:9080' })
+    })
+  }
+  Promise.resolve(readyForMainLoad).then(function () {
+    System.import('app').then(function () {
+      console.log('ran at ', new Date())
+    })
+  })
+</script>
+</body>
+</html>

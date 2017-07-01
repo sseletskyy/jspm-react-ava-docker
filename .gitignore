@@ -16,6 +16,7 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+.nyc_output
 
 # nyc test coverage
 .nyc_output
@@ -35,12 +36,14 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+public/jspm_packages
 
 # Typescript v1 declaration files
 typings/
 
 # Optional npm cache directory
 .npm
+.idea
 
 # Optional eslint cache
 .eslintcache

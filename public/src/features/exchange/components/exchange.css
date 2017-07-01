@@ -1,0 +1,12 @@
+.rangeInput:focus {
+  padding-left: 2rem;
+}
+.rangeInput {
+  padding-right: 2rem;
+}
+.rangeInput::-webkit-input-placeholder {
+  color: red;
+}
+.rangeInput::-moz-placeholder {
+  color: red;
+}
