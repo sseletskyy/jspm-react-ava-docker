@@ -5,7 +5,6 @@ import Container from 'muicss/lib/react/container'
 import Row from 'muicss/lib/react/row'
 import Col from 'muicss/lib/react/col'
 import Panel from 'muicss/lib/react/panel'
-import CurrencyList from 'features/exchange/components/CurrencyList'
 export class ExchangeContainer extends React.Component {
 
   constructor () {
@@ -36,7 +35,7 @@ export class ExchangeContainer extends React.Component {
               </div>
             </Panel>
             <Panel>
-              <CurrencyList />
+              A place for CurrencyList component
             </Panel>
           </Col>
         </Row>
